@@ -30,6 +30,7 @@
 
   <!-- Flexslider -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sidebar/3.3.1/jquery.sidebar.min.js"></script>
   
   
   <script src="assets/scripts/jquery.flexslider.js"></script>
@@ -46,11 +47,92 @@
 
   <body style="background-color: white">
 
+  <style>
+  #menuLauncher {
+   
+   position: absolute;
+   top: 10px;
+   left: 20px;
+   z-index: 2;
+   opacity: 0.5;
+  }
+  
+  #menuLauncher:hover {
+   opacity: 0.8;
+  }
+
+  .sidebar.left {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    width: 270px;
+                    background: #cccccc;
+                }
+               
+ 
+                .sidebar.right {
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    width: 270px;
+                    background: #cccccc;
+                }
+               
+ 
+                .sidebar.bottom {
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    height: 270px;
+                    background: #cccccc;
+                }
+               
+ 
+                .sidebar.top {
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    height: 270px;
+                    background: #cccccc;
+                }
+               
+ 
+                .sidebars > .sidebar {
+                    box-shadow: 0 0 5px rgba(0, 0, 0, 0.64);
+                    position: fixed;
+                    color: white;
+                    padding: 5px 0px 30px 30px;
+                    font-size: 2em;
+                    text-align: center;
+                }
+ 
+   .sidebarHeader {
+               
+                font-size: 11pt;
+                font-weight:bold;
+                text-align:left
+}
+ 
+   .sidebarText {
+               
+                font-size: 11pt;
+                text-align:left
+}
+
+  </style>  
+
   <!-- Top Navbar -->
+
+  <div id="menuLauncher">
+    <a href="#" onclick="javascript: toggleTools()">
+    <img src="assets/images/menuIcon.png" style="width: 28px; padding: 5px 0px 5px 0px"/>
+    </a>
+  </div>
 
   <div class="row">
       <div class="col-md-12" style="background-color: white" align="center">
-        <img src="assets/images/WatchloftLogoJewel.png" style="width: 200px"/>
+        <img src="assets/images/WatchloftLogoJewel2.png" style="width: 200px; padding: 5px 0px 5px 0px"/>
       </div>
  </div>
 
@@ -104,10 +186,26 @@
 
 
 
+            <div id="footer"> footer here</div>
+
+
+
+            <div class="sidebars">
+                <div class="sidebar right" style="z-index: 3" >
+                 
+                 
+                 
+                gfasdfhsafh
+                 
+          
+                </div>
+            </div>
+
+
 <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    
+   
     <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="dist/js/bootstrap.min.js"></script>
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
@@ -117,9 +215,29 @@
 
     <!-- Script -->
 <script type="text/javascript" charset="utf-8">
+  
   $(window).load(function() {
     $('.flexslider').flexslider();
+
+    $(".sidebar.right").sidebar({side : "right"});
   });
+
+  function toggleTools()  {
+ //alert('yay');
+$(".sidebar.right").trigger("sidebar:toggle");
+ 
+}
+ 
+function closeTools() {
+ 
+$(".sidebar.right").trigger("sidebar:close");
+ 
+}
+ 
+ 
+
+
+
 </script>
 
     

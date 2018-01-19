@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>The Watch Loft</title>
+    <title>Richard Perrett - Watchmaker</title>
 
       <!-- Bootstrap core CSS -->
       <link href="dist/css/bootstrap-lumen.css" rel="stylesheet">
@@ -30,10 +30,12 @@
 
   <!-- Flexslider -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sidebar/3.3.1/jquery.sidebar.min.js"></script>
   
   
   <script src="assets/scripts/jquery.flexslider.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 
@@ -41,7 +43,7 @@
   <link href="assets/css/flexslider/flexslider.css" rel="stylesheet">
   <link href="assets/css/bootstrap/simplex.css" rel="stylesheet">
   
-  
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   </head>
 
 
@@ -66,7 +68,7 @@
                     top: 0;
                     left: 0;
                     bottom: 0;
-                    width: 270px;
+                    width: 370px;
                     background: #cccccc;
                 }
                
@@ -75,7 +77,7 @@
                     top: 0;
                     right: 0;
                     bottom: 0;
-                    width: 270px;
+                    width: 370px;
                     background: #cccccc;
                 }
                
@@ -84,7 +86,7 @@
                     left: 0;
                     right: 0;
                     bottom: 0;
-                    height: 270px;
+                    height: 370px;
                     background: #cccccc;
                 }
                
@@ -120,6 +122,11 @@
                 text-align:left
 }
 
+#bioDialog {
+
+  z-index: 3
+}
+
   </style>  
 
   <!-- Top Navbar -->
@@ -132,7 +139,7 @@
 
   <div class="row">
       <div class="col-md-12" style="background-color: white" align="center">
-        <img src="assets/images/RichardPerrettLogo.png" style="width: 200px; padding: 5px 0px 5px 0px"/>
+        <img src="assets/images/RPLOgo.png" style="width: 200px; padding: 5px 0px 5px 0px"/>
       </div>
  </div>
 
@@ -166,21 +173,21 @@
               <div class="col-lg-4">
                 <img class="img" src="assets/img/home/Waltham001.png" alt="Generic placeholder image" width="252" height="140">
                 <h2>Victorian Pocket to ...</h2>
-                <p>I specialise in Victorian Pocket watch movements. Either restoring whole pocket watches or creating modern wristwatches from period pocket watch movements</p>
-                <p><a class="btn btn-default" href="OurWatches.html" role="button">See Watches &raquo;</a></p>
+                <p>I love to work on Victorian Pocket watches. The workamship is often exquisit and it is such a good feeling to bring back a watch that has fallen into disrepair</p>
+                <p><a class="btn btn-default" href="OurWatches.html" role="button">Pocket Watches &raquo;</a></p>
               </div><!-- /.col-lg-4 -->
               <div class="col-lg-4">
                 <img class="img" src="assets/img/home/Seiko5606A.png" alt="Generic placeholder image" width="252" height="140">
                 <h2> ... Modern Automatic</h2>
-                <p>The hotel is situated at right outside the main entrance to the ancient walled town of Tenby. Access to the town is immediate and yet due to the substantial achitecture ... </p>
-                <p><a class="btn btn-default" href="Location.html" role="button">See Location &raquo;</a></p>
+                <p>The modern automatic watch is such a beautifully conceived piece of engineering. Just wearing it winds the mainspring.  Power does not come greener than that.  The watches are also a little more interesting to work than standard wind up pieces.</p>
+                <p><a class="btn btn-default" href="Location.html" role="button">Automatics &raquo;</a></p>
               </div><!-- /.col-lg-4 -->
               <div class="col-lg-4">
-                <img class="img" src="assets/img/home/Boutique001.png" alt="Generic placeholder image" width="252" height="140">
-                <h2>Online Boutique</h2>
-                <p>When you purchase one of our timepieces you don't just get a watch. Our customers tend to know what they are buying and we value that. 
+                <img class="img" src="assets/img/home/YouTubePic.png" alt="Generic placeholder image" width="252" height="140">
+                <h2>YouTube Channel</h2>
+                <p>See how these beautiful watches are fixed and serviced.  Whether you are an enthusiast, just interested or a fellow watchmaker this growing library of videos is I hope a good watch. I love making them.
                 </p>
-                <p><a class="btn btn-success" href="#" role="button" onclick="javascript: window.open('BookingForm.html', 'Booking Form', 'width=780,height=900');">Book Now &raquo;</a></p>
+                <p><a class="btn btn-danger" href="https://www.youtube.com/channel/UCg8I9CzdyNLiKjGohCTUzBw" target="_blank" role="button">Watch Channel &raquo;</a></p>
               </div><!-- /.col-lg-4 -->
             </div><!-- /.row -->
 
@@ -196,10 +203,13 @@
                  <div id="sidebarContent">
                    <table>
                       <tr>
-                        <td>The Watch Loft</td>
+                        <td>Richard Perrett</td>
 
                       </tr>
+                      <tr>
+                        <td><a href="#" onclick="javascript: openBio()">About Me</a></td>
 
+                      </tr>
 
 
                    </table>
@@ -212,6 +222,12 @@
           
                 </div>
             </div>
+
+            <div id="bioDialog" title="About Me">
+              <img src="assets/img/home/MeBioWatchmaker.png" />
+
+            </div>
+
 
 
 <!-- Bootstrap core JavaScript
@@ -246,7 +262,11 @@ $(".sidebar.right").trigger("sidebar:close");
  
 }
  
+function openBio() {
  
+ 
+ 
+}
 
 
 

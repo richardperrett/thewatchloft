@@ -1,0 +1,108 @@
+
+  h2 {
+    
+    font-size: 14pt
+  
+    }
+  
+    #menuLauncher {
+     
+     position: absolute;
+     top: 10px;
+     left: 20px;
+     z-index: 2;
+     opacity: 0.5;
+    }
+    
+    #menuLauncher:hover {
+     opacity: 0.8;
+    }
+  
+    .sidebar.left {
+                      position: fixed;
+                      top: 0;
+                      left: 0;
+                      bottom: 0;
+                      width: 370px;
+                      background: #cccccc;
+                  }
+                 
+   
+                  .sidebar.right {
+                      top: 0;
+                      right: 0;
+                      bottom: 0;
+                      width: 370px;
+                      background: #5c5c5c;
+                  }
+                 
+   
+                  .sidebar.bottom {
+                      left: 0;
+                      right: 0;
+                      bottom: 0;
+                      height: 370px;
+                      background: #cccccc;
+                  }
+                 
+   
+                  .sidebar.top {
+                      left: 0;
+                      right: 0;
+                      top: 0;
+                      height: 270px;
+                      background: #cccccc;
+                  }
+                 
+   
+                  .sidebars > .sidebar {
+                      box-shadow: 0 0 5px rgba(0, 0, 0, 0.64);
+                      position: fixed;
+                      color: white;
+                      padding: 5px 0px 30px 30px;
+                      font-size: 2em;
+                      text-align: center;
+                  }
+   
+     .sidebarHeader {
+                 
+                  font-size: 11pt;
+                  font-weight:bold;
+                  text-align:left
+  }
+   
+     .sidebarText {
+                 
+                  font-size: 11pt;
+                  text-align:left;
+                  color: white !important
+  }
+  
+  .modal.modal-wide .modal-dialog {
+    width: 90%;
+  }
+  .modal-wide .modal-body {
+    overflow-y: auto;
+  }
+  
+  .modal-lg { width: 90% !important}
+  
+  .pageLink {font-size: 14pt; font-weight: bold }
+  
+  .bodyText {font-size: 14pt; 
+              color: #525252;
+              line-height: 120%;
+              margin-right: 0px }
+  
+  /* Footer */
+  
+  #footer {
+  
+  background-color: #7b7b7b;
+  height: 400px ; 
+  
+  }
+
+  /* Bootstrap tweak   */
+
+.col-sm-4 {padding: 0px 25px 0px 25px !important}

@@ -82,11 +82,70 @@ Released: January 2018
 
   <body style="background-color: white">
         
+  <style>
 
+/* Customising Bootstrap Navbar */
+
+.menuItem {
+
+font-size: 14pt;
+font-weight: bold;
+
+
+}
+
+.navbar-nav > li > a, .navbar-brand {
+    padding-top:5px !important; padding-bottom:0 !important;
+    height: 30px;
+}
+.navbar {min-height:30px !important;}.navbar-nav > li > a, .navbar-brand {
+    padding-top:5px !important; padding-bottom:0 !important;
+    height: 30px;
+}
+.navbar {min-height:30px !important;}
+
+#sliderWrapper {
+   padding-top: -20px
+}
+
+
+  /* Container needed to position the button. Adjust the width as needed */
+.container {
+  position: relative;
+  width: 100%;
+}
+
+/* Make the image responsive */
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+/* Style the button and place it in the middle of the container/image */
+.container .btn {
+  position: absolute;
+  top: 55%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.container .btn:hover {
+  background-color: black;
+}
+  
+  </style>
 
 
   <!-- Top Navbar -->
-
+<!--
   <div id="menuLauncher">
     <a href="#" onclick="javascript: toggleTools()">
     <img src="assets/images/menuIcon.png" style="width: 28px; padding: 5px 0px 5px 0px"/>
@@ -94,20 +153,108 @@ Released: January 2018
   </div>
 
   <div class="row">
-      <div class="col-md-12" style="background-color: white" align="center">
-        <img src="assets/images/RPLOgo.png" style="width: 200px; padding: 5px 0px 5px 0px"/>
-      </div>
- </div>
+      <div class="col-sm" style="background-color: white" align="center">
+       <div>
+      <div class="col-sm" style="background-color: white" align="center">
+        <img src="assets/img/home/RPLogo3.png" style="width: 200px; padding: 5px 0px 5px 0px"/>
+     <div>
+    <div class="col-sm" style="background-color: white" align="center">
+       <a href="" ><img src="assets/img/home/YouTubeLogo.png" style="width: 90px; padding: 5px 0px 5px 50px"/></a>
+    </div>
+
+  -->
+  <div style="height: 10px"></div>   
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <!-- 
+            <div id="menuLauncher">
+              
+                <a href="#" onclick="javascript: toggleTools()">
+                <img src="assets/images/menuIcon.png" style="width: 28px; padding: 5px 0px 5px 0px"/>
+                </a>
+              </div>
+             -->
+            <a class="navbar-brand" href="index.html"><img src="assets/img/home/RPLogo4.png" style="height: 50px" /></a>
+            
+          </div>
+      
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav" style="padding-top: 10px !important">
+
+             <!-- <li class="active"><a href="#" ">Link <span class="sr-only">(current)</span></a></li>-->
+              <li><a href="#" style="padding-left: 50px" class="menuItem">Boutique</a></li>
+              <li><a href="#" class="menuItem">Servicing and Repair</a></li>
+              <li><a href="#" class="menuItem">Valuations</a></li>
+              <li><a href="#" class="menuItem"></a></li>
+              <!--
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Repair and Servcing <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>
+            -->
+            </ul>
+            <form class="navbar-form navbar-left">
+              <!--
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search">
+              </div>
+              <button type="submit" class="btn btn-default">Submit</button>
+            -->
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="https://www.youtube.com/channel/UCg8I9CzdyNLiKjGohCTUzBw" target="_blank"><img src="assets/img/home/YouTubeLogo.png" style="height: 28px" /></a></li>
+              <li><a href="https://www.instagram.com/richardwatchmaker" target="_blank"><img src="assets/img/home/instagramLogo.png" style="height: 28px" /></a></li>
+              <!--
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </li>
+            -->
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+      
+ 
 
  <!-- Image Slider -->
+ <div id="sliderWrapper">
  <div class="row">
     <div class="flexslider">
       <ul class="slides">
         <li>
-          <img src="assets/images/slider/wlSlider001.png" />
+            <div class="container">
+                <img src="assets/images/slider/wlSlider001.png" alt="Snow">
+                <button class="btn">Buy Vintage Seiko</button>
+              </div>
         </li>
         <li>
           <img src="assets/images/slider/wlSlider001.png" />
+          <button style >gsdgdsh</button>
         </li>
         <li>
           <img src="assets/images/slider/wlSlider001.png"/>
@@ -115,6 +262,7 @@ Released: January 2018
       </ul>
     </div>
  </div>
+</div>
  
  <!-- Front Page Features -->
 
@@ -127,27 +275,26 @@ Released: January 2018
             <!-- Three columns of text below the carousel -->
             <div class="row">
               <div class="col-sm-4" style="text-align: center">
-                <img class="img" src="assets/img/home/Waltham001.png" alt="Generic placeholder image" width="252" height="140" >
-                <h2>Victorian Pocket to ...</h2>
-                <p class="bodyText" style="text-align: left" >I love to work on Victorian Pocket watches. The workamship is often exquisit and it is such a good feeling to bring back a watch that has fallen into disrepair</p>
-                <p style="text-align: right"><a class="btn btn-default" href="#" onclick="openSeikoVid()" role="button">Pocket Watches &raquo;</a></p>
+                <img class="img" src="assets/img/home/ValuationsBlue.png" alt="Generic placeholder image" width="252" height="140" style="padding-bottom: 15px" >
+                <p class="bodyText" style="text-align: left" >Getting an accurate valuation for your watch is important.  We specialise on watches only, have extensive expertse on the market and can provide a formal valuation that you can have confidence in ... <br>  </p>
+                <p style="text-align: right"><a class="pageLink" href="#" onclick="openPocketWatches()" role="button">Get a Free Quote   ... &raquo;</a></p>
               </div><!-- /.col-lg-4 -->
               <div class="col-sm-4" style="text-align: center">
-                <img class="img" src="assets/img/home/Seiko5606A.png" alt="Generic placeholder image" width="252" height="140">
-                <h2> ... Modern Automatic</h2>
+                <img class="img" src="assets/img/home/Seiko5606A.png" alt="Generic placeholder image" width="252" height="140" style="padding-bottom: 15px">
                 <p class="bodyText" style="text-align: left">The modern automatic watch is such a beautifully conceived piece of engineering. Just wearing it winds the mainspring.  Power does not come greener than that.  The watches are also a little more interesting to work than standard wind up pieces.</p>
-                <p style="text-align: right"><a class="pageLink" href="#" onclick="openSeikoVid()" role="button">Automatics &raquo;</a></p>
+                <p style="text-align: right"><a class="pageLink" href="#" onclick="openSeikoVid()" role="button">See How it Works ... &raquo;</a></p>
               </div><!-- /.col-lg-4 -->
               <div class="col-sm-4" style="text-align: center">
-                <a href="https://www.youtube.com/channel/UCg8I9CzdyNLiKjGohCTUzBw" target="_blank">
-                <img class="img" src="assets/img/home/YouTubePic.png" alt="Generic placeholder image" width="252" height="140">
+                <a href="" target="_blank">
+                <img class="img" src="assets/img/home/TheBoutique.png" alt="Generic placeholder image" width="252" height="140" style="padding-bottom: 15px">
                 </a>
-                <h2>YouTube Channel</h2>
-                <p class="bodyText" style="text-align: left">See how these beautiful watches are fixed and serviced.  Whether you are an enthusiast, just interested or a fellow watchmaker this growing library of videos is I hope a good watch. I love making them.
+                <p class="bodyText" style="text-align: left">Buy to wear or for your collection.  Our watches are all serviced, tested and come with a two year warranty. 
                 </p>
-                <p style="text-align: right"><a class="pageLink"  href="https://www.youtube.com/channel/UCg8I9CzdyNLiKjGohCTUzBw" target="_blank" role="button">Watch Channel &raquo;</a></p>
+                <p style="text-align: right"><a class="pageLink"  href="https://www.youtube.com/channel/UCg8I9CzdyNLiKjGohCTUzBw" target="_blank" role="button">Visit The Boutique &raquo;</a></p>
               </div><!-- /.col-lg-4 -->
             </div><!-- /.row -->
+
+            
 
             </div>
             <div style="height: 40px"></div>
@@ -164,11 +311,13 @@ Released: January 2018
                       </tr>
                       <tr>
                         <td style="text-align: left">
-                          <p style="padding-left: 5px; font-weight:bold">Watchmaker</p>
+                          <p style="padding-left: 5px; font-weight:bold">Watchmaker</p><br><br>
                           
                   
-                          <a href="#" onclick="javascript: openBio();" style="color: white !important; text-decoration: none !important; padding-left: 5px"><span style="color: white !important; text-decoration: none !important; font-size: 14pt; font-weight: bold">About me</span></a>
-
+                          <p><a href="team.html"  style="color: white !important; text-decoration: none !important; padding-left: 5px"><span style="color: white !important; text-decoration: none !important; font-size: 18pt; font-weight: bold">The Shop</span></a></p><br>
+                          <p><a href="services.html" onclick="javascript: openValuation();" style="color: white !important; text-decoration: none !important; padding: 7px 0px 0px 5px"><span style="color: white !important; text-decoration: none !important; font-size: 18pt; font-weight: bold">Servicing and Repair</span></a></p><br>
+                          <p><a href="products.html" onclick="javascript: openValuation();" style="color: white !important; text-decoration: none !important; padding: 7px 0px 0px 5px"><span style="color: white !important; text-decoration: none !important; font-size: 18pt; font-weight: bold">Valuations</span></a></p><br>
+                        
                         </td>
 
                       </tr>
@@ -256,6 +405,22 @@ BootstrapDialog.show({
       }
 
 
+function openValuation(){
+
+  var $textAndPic3 = $('<div></div>');
+      $textAndPic3.append('<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSekSRY4lwYF1DsEcOUWBnAhqgS7HdfExkL-XdacAvYuIjtVWg/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>');
+        
+
+BootstrapDialog.show({
+            
+            type: BootstrapDialog.TYPE_DEFAULT,
+            size: BootstrapDialog.SIZE_WIDE,
+            message: $textAndPic3
+        });
+      }
+
+
+      
 function openBio(){
 
   var $textAndPic2 = $('<div></div>');
@@ -273,6 +438,8 @@ BootstrapDialog.show({
             message: $textAndPic2
         });
 }      
+
+
 
 /*
 function stopVid() {

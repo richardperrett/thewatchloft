@@ -194,7 +194,7 @@ font-weight: bold;
                 </a>
               </div>
              -->
-            <a class="navbar-brand" href="index.html"><img src="assets/img/home/RPLogo4.png" style="height: 50px" /></a>
+            <a class="navbar-brand" href="indexSoon.html"><img src="assets/img/home/RPLogo4.png" style="height: 50px" /></a>
             
           </div>
       
@@ -266,9 +266,9 @@ font-weight: bold;
         
         <div id="servicingPrices">
          
-          <div id="sercingPricesTitle" style="height: 55px; background-color: grey">
+          <div id="servicingPricesTitle" style="height: 55px; background-color: grey; text-align: right; padding: 16px 20px 0px 0px">
 
-
+            <a href="#" onclick="openServicePrices()" style="color:white; font-size: 14pt">Servicing Prices >></a>
 
 
           </div>
@@ -287,11 +287,27 @@ font-weight: bold;
       
       
       </div><!-- /.col-lg-6 -->
-      <div class="col-sm-6" style="text-align: left; padding: 15px 0px 0px 20px">
+      <div class="col-sm-6" style="text-align: left">
          
+          <table>
+            <tr >
+              <td style="padding-bottom: 20px"><img src="assets/img/home/Service1_Btn.png" /></td>
+              <td style="padding: 0px 0px 20px 15px"><a href="#" onclick="goQuartz1()" style="font-size: 16pt; font-weight: bold">Start</a></td>
+            </tr>
+            <tr>
+              <td style="padding-bottom: 20px"><img src="assets/img/home/Service2_Btn.png" /></td>
+              <td style="padding: 0px 0px 20px 15px"><a href="#" onclick="goQuartz2()" style="font-size: 16pt; font-weight: bold">Start</a></td>
+            </tr>
+            <tr>
+              <td><img src="assets/img/home/Service3_Btn.png" /></td>
+              <td style="padding: 0px 0px 20px 15px"><a href="#" onclick="goQuartz3()" style="font-size: 16pt; font-weight: bold">Start</a></td>
+            </tr>
+
+           
+
+
+          </table>
      
-     
-          <img class="img" src="assets/img/home/OurServiceProcess2.png" alt="Generic placeholder image"  style="padding-bottom: 15px; max-width: 600px" >
 
 
 
@@ -300,9 +316,52 @@ font-weight: bold;
       
     </div><!-- /.row -->
 
+    <div>
+
+        <div id="serviceCostsPanel">
+        <div class="row" style="padding: 0px 15px 0px 15px">
+
+            <div class="col-sm-2" style="text-align: center; height: 55px; background-color: grey; padding: 15px 0px 0px 20px" id="pricesBoxTitle">
+            
+                
+                
+              </div><!-- /.col-lg-6 -->
+          <div class="col-sm-8" style="text-align: center; height: 55px; background-color: grey; padding: 10px 0px 0px 20px" id="pricesBoxTitle">
+            
+            <span style="color: white; font-size: 18pt; font-weight: bold; padding-right: 100px" >Servicing Prices</span>
+            
+          </div><!-- /.col-lg-6 -->
+
+          <div class="col-sm-2" style="text-align: right; height: 55px; background-color: grey; padding: 15px 20px 0px 20px" id="pricesBoxTitle">
+            
+            <a href="#" onclick="closeServicePrices()" style="color:white; font-size:12pt">Close<span style="padding-left: 7px" class="glyphicon glyphicon-remove-circle"></span></a>
+            
+          </div><!-- /.col-lg-6 -->
+         
+
+
+        </div>
+
+
+        
+          <div class="row" style="padding: 0px 0px 0px 0px">
+            <div class="col-sm-6" style="text-align: left;  background-color: white; padding: 15px 0px 0px 20px" id="pricesBoxTitle">
+              <img class="img" src="assets/img/home/mechanicalPrices.png" alt="Generic placeholder image"  style="padding-bottom: 15px; max-width: 600px" >
+
+            </div><!-- /.col-lg-6 -->
+            <div class="col-sm-6" style="text-align: left;  background-color: white; padding: 15px 0px 0px 20px" id="pricesBoxTitle">
+              <img class="img" src="assets/img/home/quartzPrices.png" alt="Generic placeholder image"  style="padding-bottom: 15px; max-width: 600px" >
+
+            </div><!-- /.col-lg-6 -->
+          </div>
+        </div>
+    
+    </div>
+  
+
     <div class="row">
         <div class="col-sm-6" style="text-align: center">
-          bmbmbnm
+          hjkhkuh
         </div><!-- /.col-lg-6 -->
         <div class="col-sm-6" style="text-align: center">
           <img class="img" src="assets/img/home/repairs.png" alt="Generic placeholder image" width="252" height="140" style="padding-bottom: 0px">
@@ -410,11 +469,30 @@ font-weight: bold;
 
     $(".sidebar.right").sidebar({side : "right"});
 
-    $('.youtube_player_iframe').each(function(){
+    /* $('.youtube_player_iframe').each(function(){
   this.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*')
-});
+}); */
+
+    $("#serviceCostsPanel").hide('slow'); 
+    ;
+
 
   });
+
+
+  function openServicePrices() {
+ 
+    $("#serviceCostsPanel").show('slow');
+    $("#servicingPricesTitle").hide('slow')
+}
+
+ function closeServicePrices() {
+ 
+$("#serviceCostsPanel").hide('slow');
+$("#servicingPricesTitle").show('slow')
+}
+
+
 
   function toggleTools()  {
  //alert('yay');

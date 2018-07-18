@@ -84,6 +84,16 @@ Released: January 2018
         
   <style>
 
+.serviceText {
+font-family:arial;
+font-size: 16pt;
+color: #464646;
+line-height:140%;
+
+
+
+}
+
 .pageHeader {
 
 font-family: Arial, Helvetica, sans-serif;
@@ -302,10 +312,20 @@ font-weight: bold;
               <td><img src="assets/img/home/Service3_Btn.png" /></td>
               <td style="padding: 0px 0px 20px 15px"><a href="#" onclick="goQuartz3()" style="font-size: 16pt; font-weight: bold">Start</a></td>
             </tr>
+          </table>
 
-           
-
-
+          <table width=580>
+            <tr>
+              <td style="padding-Top: 20px">
+              <p class="serviceText">To understand the full range of service options please see our <a href="#" onclick="openServicePrices()" style="font-weight: bold;">Servicing Prices</a>.</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding-Top: 20px; text-align: center">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLScDBa4acCyR6CNf1iJth-K0aRPFa_GI7zGyV6wFQwUFqtDDwg/viewform" target="_blank"  style="font-weight: bold;"><img src="assets/img/home/StartServiceBtn.png" alt="Generic placeholder image"  style="padding-bottom: 15px; width: 200px" ></a>.</p>
+              
+            </td>
+            </tr>
           </table>
      
 
@@ -361,16 +381,18 @@ font-weight: bold;
 
     <div class="row">
         <div class="col-sm-6" style="text-align: center">
-          hjkhkuh
+          
+          TODO - How it Works 
+
         </div><!-- /.col-lg-6 -->
         <div class="col-sm-6" style="text-align: center">
           <img class="img" src="assets/img/home/repairs.png" alt="Generic placeholder image" width="252" height="140" style="padding-bottom: 0px">
         
           <div id="servicingPrices">
          
-              <div id="sercingPricesTitle" style="height: 55px; background-color: #0e1c36">
+              <div id="repairPricesTitle" style="height: 55px; background-color: #0e1c36">
     
-    
+                <a href="#" onclick="openRepairPrices()" style="color:white; font-size: 14pt">Repair Prices >></a>
     
     
               </div>
@@ -401,7 +423,47 @@ font-weight: bold;
 
 </div>
 
+<div>
 
+  <div id="repairCostsPanel">
+  <div class="row" style="padding: 0px 15px 0px 15px">
+
+      <div class="col-sm-2" style="text-align: center; height: 55px; background-color: #121b36; padding: 15px 0px 0px 20px" id="pricesBoxTitle">
+      
+          
+          
+        </div><!-- /.col-lg-6 -->
+    <div class="col-sm-8" style="text-align: center; height: 55px; background-color: #121b36; padding: 10px 0px 0px 20px" id="pricesBoxTitle">
+      
+      <span style="color: white; font-size: 18pt; font-weight: bold; padding-right: 100px" >Repair Prices</span>
+      
+    </div><!-- /.col-lg-6 -->
+
+    <div class="col-sm-2" style="text-align: right; height: 55px; background-color: #121b36; padding: 15px 20px 0px 20px" id="pricesBoxTitle">
+      
+      <a href="#" onclick="closeRepairPrices()" style="color:white; font-size:12pt">Close<span style="padding-left: 7px" class="glyphicon glyphicon-remove-circle"></span></a>
+      
+    </div><!-- /.col-lg-6 -->
+   
+
+
+  </div>
+
+
+  
+    <div class="row" style="padding: 0px 0px 0px 0px">
+      <div class="col-sm-6" style="text-align: left;  background-color: white; padding: 15px 0px 0px 20px" id="pricesBoxTitle">
+        <img class="img" src="assets/img/home/mechanicalPrices.png" alt="Generic placeholder image"  style="padding-bottom: 15px; max-width: 600px" >
+
+      </div><!-- /.col-lg-6 -->
+      <div class="col-sm-6" style="text-align: left;  background-color: white; padding: 15px 0px 0px 20px" id="pricesBoxTitle">
+        <img class="img" src="assets/img/home/quartzPrices.png" alt="Generic placeholder image"  style="padding-bottom: 15px; max-width: 600px" >
+
+      </div><!-- /.col-lg-6 -->
+    </div>
+  </div>
+
+</div>
 
 
 
@@ -474,24 +536,47 @@ font-weight: bold;
 }); */
 
     $("#serviceCostsPanel").hide('slow'); 
-    ;
+    $("#repairCostsPanel").hide('slow');
+    
 
 
   });
 
 
-  function openServicePrices() {
+function scroll2Bottom() {
+
+ window.scrollTo(0,document.body.scrollHeight);
+
+}
+
+
+function openServicePrices() {
  
     $("#serviceCostsPanel").show('slow');
     $("#servicingPricesTitle").hide('slow')
 }
 
- function closeServicePrices() {
+function closeServicePrices() {
  
 $("#serviceCostsPanel").hide('slow');
 $("#servicingPricesTitle").show('slow')
 }
 
+function openRepairPrices() {
+ 
+ 
+$("#repairCostsPanel").show('slow');
+$("#repairPricesTitle").hide('slow');
+
+timeOut=setTimeout('scroll2Bottom()',100);
+
+}
+
+function closeRepairPrices() {
+ 
+$("#repairCostsPanel").hide('slow');
+$("#repairPricesTitle").show('slow')
+}
 
 
   function toggleTools()  {

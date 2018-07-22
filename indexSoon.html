@@ -264,13 +264,13 @@ font-weight: bold;
       <ul class="slides">
         <li>
             <div class="container">
-                <img src="assets/images/slider/wlSlider001.png" alt="Snow">
-                <button class="btn">Buy Vintage Seiko</button>
+                <img src="assets/img/home/SliderOneRPW.png" alt="Snow">
+                <!--<button class="btn">Buy Vintage Seiko</button>-->
               </div>
         </li>
         <li>
-          <img src="assets/images/slider/wlSlider001.png" />
-          <button style >gsdgdsh</button>
+          <img src="assets/img/home/SliderTwoRPW.png" />
+          
         </li>
         <li>
           <img src="assets/images/slider/wlSlider001.png"/>
@@ -291,20 +291,20 @@ font-weight: bold;
             <!-- Three columns of text below the carousel -->
             <div class="row">
               <div class="col-sm-4" style="text-align: center">
-                <img class="img" src="assets/img/home/Seiko5606A.png" alt="Generic placeholder image" width="252" height="140" style="padding-bottom: 15px">
+                <a href="Servicing.html"><img class="img" src="assets/img/home/Seiko5606A.png" alt="Generic placeholder image" width="252" height="140" style="padding-bottom: 15px"></a>
                 <p class="bodyText" style="text-align: left">Mechanical watches need servicing every five years or so and Quartz watches need a new battery from time to time.  All watches get pretty grimey two so we offer a full set of service and cleaning options ... </p>
                 <p style="text-align: right"><a class="pageLink" href="Servicing.html" >Repair & Servicing Info ... &raquo;</a></p>
               </div><!-- /.col-lg-4 -->
               <div class="col-sm-4" style="text-align: center">
                 <a href="" target="_blank">
-                <img class="img" src="assets/img/home/TheBoutique.png" alt="Generic placeholder image" width="252" height="140" style="padding-bottom: 15px">
+                    <a href="#" onclick="alert('The Boutique Will Open in October 2018 with the release of our first watch by Richard')"><img class="img" src="assets/img/home/TheBoutique.png" alt="Generic placeholder image" width="252" height="140" style="padding-bottom: 15px">
                 </a>
                 <p class="bodyText" style="text-align: left">Buy to wear or for your collection.  Our watches are all serviced, tested and come with a two year warranty. 
                 </p>
-                <p style="text-align: right"><a class="pageLink"  href="https://www.youtube.com/channel/UCg8I9CzdyNLiKjGohCTUzBw" target="_blank" role="button">Visit The Boutique &raquo;</a></p>
+                <p style="text-align: right"><a class="pageLink" onclick="alert('The Boutique Will Open in October 2018 with the release of our first watch by Richard')" role="button">Visit The Boutique &raquo;</a></p>
               </div><!-- /.col-lg-4 -->
               <div class="col-sm-4" style="text-align: center">
-                <img class="img" src="assets/img/home/ValuationsBlue.png" alt="Generic placeholder image" width="252" height="140" style="padding-bottom: 15px" >
+                  <a href="Valuations.html"><img class="img" src="assets/img/home/ValuationsBlue.png" alt="Generic placeholder image" width="252" height="140" style="padding-bottom: 15px" ></a>
                 <p class="bodyText" style="text-align: left" >Getting an accurate valuation for your watch is important.  We specialise on watches only, have extensive expertse on the market and can provide a formal valuation that you can have confidence in ... <br>  </p>
                 <p style="text-align: right"><a class="pageLink" href="Valuations.html">More info ... &raquo;</a></p>
               </div><!-- /.col-lg-4 -->
@@ -324,12 +324,12 @@ font-weight: bold;
                   <table width="600">
                     <tr>
                       <td stlyle="width: 100px; text-align: left !important"><a href="https://docs.google.com/forms/d/e/1FAIpQLSeb1e4VTjwv3DXVqJpMcDVkPQXu408baRibEQuDwQcy7pBoUg/viewform"  class="footerLink" target="_blank" style="padding-left: 0px">Contact Us</a></td>
-                      <td stlyle="width: 350px; text-align: left !important"><a href="" target="_blank" class="footerLink"><img src="" />YouTube</a></td>
+                      <td stlyle="width: 350px; text-align: left !important"><a href="https://www.youtube.com/channel/UCg8I9CzdyNLiKjGohCTUzBw" target="_blank" class="footerLink"><img src="" />YouTube</a></td>
                     </tr>
 
                     <tr>
                       <td></td>
-                      <td><a href="" target="_blank" class="footerLink"><img src="" />Instagram</a></td>
+                      <td><a href="https://www.instagram.com/richardwatchmaker" target="_blank" class="footerLink"><img src="" />Instagram</a></td>
                     </tr>
 
                     <tr>
@@ -418,7 +418,9 @@ font-weight: bold;
 <script type="text/javascript" charset="utf-8">
   
   $(window).load(function() {
-    $('.flexslider').flexslider();
+    $('.flexslider').flexslider({
+      slideshowSpeed: 4000
+    });
 
     $(".sidebar.right").sidebar({side : "right"});
 

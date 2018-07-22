@@ -84,6 +84,28 @@ Released: January 2018
         
   <style>
 
+    .processListItem {
+
+      font-size: 14pt;
+
+    }
+
+     .bodyText {
+
+font-family: arial;
+font-size: 16pt;
+color:#3f3f3f;
+text-decoration: none !important
+}
+
+.footerLink {
+font-family: arial;
+font-size: 16pt;
+color: white;
+text-decoration: none !important
+
+}
+
 .serviceText {
 font-family:arial;
 font-size: 16pt;
@@ -302,15 +324,15 @@ font-weight: bold;
           <table style=>
             <tr >
               <td style="padding: 0px 0px 20px 20px; margin: auto"><img src="assets/img/home/Service1_Btn.png" /></td>
-              <td style="padding: 0px 0px 20px 15px; text-align: cennter"><a href="#" onclick="goQuartz1()" style="font-size: 16pt; font-weight: bold">Start</a></td>
+              <td style="padding: 0px 0px 20px 15px; text-align: cennter"><a href="https://docs.google.com/forms/d/e/1FAIpQLScDBa4acCyR6CNf1iJth-K0aRPFa_GI7zGyV6wFQwUFqtDDwg/viewform" target="_blank" style="font-size: 16pt; font-weight: bold">Start</a></td>
             </tr>
             <tr>
               <td style="padding: 0px 0px 20px 20px; margin: auto"><img src="assets/img/home/Service2_Btn.png" /></td>
-              <td style="padding: 0px 0px 20px 15px"><a href="#" onclick="goQuartz2()" style="font-size: 16pt; font-weight: bold">Start</a></td>
+              <td style="padding: 0px 0px 20px 15px"><a href="https://docs.google.com/forms/d/e/1FAIpQLScDBa4acCyR6CNf1iJth-K0aRPFa_GI7zGyV6wFQwUFqtDDwg/viewform"  target="_blank" style="font-size: 16pt; font-weight: bold">Start</a></td>
             </tr>
             <tr>
               <td style="padding: 0px 0px 10px 20px"><img src="assets/img/home/Service3_Btn.png" /></td>
-              <td style="padding: 0px 0px 0px 15px"><a href="#" onclick="goQuartz3()" style="font-size: 16pt; font-weight: bold">Start</a></td>
+              <td style="padding: 0px 0px 0px 15px"><a href="https://docs.google.com/forms/d/e/1FAIpQLScDBa4acCyR6CNf1iJth-K0aRPFa_GI7zGyV6wFQwUFqtDDwg/viewform" target="_blank" style="font-size: 16pt; font-weight: bold">Start</a></td>
             </tr>
           </table>
 
@@ -323,6 +345,7 @@ font-weight: bold;
             
             <tr>
               <td style="padding-Top: 0px; text-align: center">
+              <a href="#" onclick="openServiceProcess()" style="font-weight: bold; padding-right: 20px">our service process</a>
               <a href="https://docs.google.com/forms/d/e/1FAIpQLScDBa4acCyR6CNf1iJth-K0aRPFa_GI7zGyV6wFQwUFqtDDwg/viewform" target="_blank"  style="font-weight: bold;"><img src="assets/img/home/StartServiceBtn.png" alt="Generic placeholder image"  style="padding-bottom: 15px; width: 200px" ></a>.</p>
               
             </td>
@@ -472,8 +495,56 @@ font-weight: bold;
 
 
  <!-- ************ Servcing Ends Content Here ************************ -->
-            <div style="height: 40px"></div>
-            <div id="footer"> footer here</div>
+           
+
+ <!-- ****************************** Footer Starts Here ********************************************-->
+ <div style="height: 40px"></div>
+ <div id="footer"> 
+     <div class="row" style="text-align: left">
+
+    <div class="col-sm-6" style="background-color: #747474; height: 500px; padding: 70px 20px 20px 60px">
+         
+       <table width="600">
+         <tr>
+           <td stlyle="width: 100px; text-align: left !important"><a href="https://docs.google.com/forms/d/e/1FAIpQLSeb1e4VTjwv3DXVqJpMcDVkPQXu408baRibEQuDwQcy7pBoUg/viewform"  class="footerLink" target="_blank" style="padding-left: 0px">Contact Us</a></td>
+           <td stlyle="width: 350px; text-align: left !important"><a href="" target="_blank" class="footerLink"><img src="" />YouTube</a></td>
+         </tr>
+
+         <tr>
+           <td></td>
+           <td><a href="" target="_blank" class="footerLink"><img src="" />Instagram</a></td>
+         </tr>
+
+         <tr>
+           <td><a href="http://www.richardperrett.com/boutique/index.php" class="footerLink" target="_blank">The Boutique</a></td>
+           <td></td>
+        </tr>
+
+        <tr>
+         <td><a href="Servicing.html" class="footerLink">Service and Repair</a></td>
+         <td></td>
+        </tr>
+        
+        <tr>
+         <td><a href="Valuations.html" class="footerLink">Valuations</a></td>
+         <td></td>
+        </tr>
+       </table>
+           
+   </div>
+     <div class="col-sm-6" style="text-align: right; background-image: url('assets/img/home/FooterGraphic.png'); background-repeat: no-repeat">
+       <div style="height: 500px"></div>
+         
+       </div>
+      
+
+    
+     </div> 
+   </div> 
+
+ </div>
+
+ <!--
 
             <div class="sidebars">
                 <div class="sidebar right" style="z-index: 3" >
@@ -510,7 +581,7 @@ font-weight: bold;
             </div>
 
         
-
+-->
 
 
 <!-- Bootstrap core JavaScript
@@ -667,6 +738,44 @@ function stopVid() {
  
 }
 */
+
+function openServiceProcess()   {
+
+var $textAndPic2 = $('<div style="padding-left: 100px"s></div>');
+    $textAndPic2.append('<h2>Mechanical Service Process</h2>');
+    $textAndPic2.append('<ul>');
+    $textAndPic2.append('<li class="processListItem">Receipt Inspection</li>');
+    $textAndPic2.append('<li class="processListItem">Case Disassembly</li>');
+    $textAndPic2.append('<li class="processListItem">Movement Disassembly</li>');
+    $textAndPic2.append('<li class="processListItem">Ultrasonic Cleaing of Parts</li>');
+    $textAndPic2.append('<li class="processListItem">Replace Worn or Broken Parts as Agreed</li>');
+    $textAndPic2.append('<li class="processListItem">Reassemble and Lubricate</li>');
+    $textAndPic2.append('<li class="processListItem">Pressure Test Case as Appropriate</li>');
+    $textAndPic2.append('<li class="processListItem">Performance Test</li>');
+    $textAndPic2.append('<li class="processListItem">Pre-Shipping Final Quality Inspection</li>');
+    $textAndPic2.append('</ul>');
+    $textAndPic2.append('<div style="height: 10px">');
+    $textAndPic2.append('<p class="processListItem">Please note we pressure test up to a <b>maximum of 50 Metres</b>');
+   $textAndPic2.append('<div style="height: 150px">');
+      
+
+      
+
+BootstrapDialog.show({
+
+          onshown: function(dialogRef){
+              closeTools();
+          },
+          title: 'Richard Perrett Watchmaker - Our Service Process',
+          type: BootstrapDialog.TYPE_DEFAULT,
+          size: BootstrapDialog.SIZE_WIDE,
+          message: $textAndPic2
+      });
+}      
+
+
+
+
 </script>
 
     

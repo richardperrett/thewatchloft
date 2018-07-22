@@ -84,6 +84,24 @@ Released: January 2018
         
   <style>
 
+
+
+    .bodyText {
+
+font-family: arial;
+font-size: 16pt;
+color:#3f3f3f;
+text-decoration: none !important
+}
+
+.footerLink {
+font-family: arial;
+font-size: 16pt;
+color: white;
+text-decoration: none !important
+
+}
+
 .serviceText {
 font-family:arial;
 font-size: 16pt;
@@ -308,7 +326,7 @@ font-weight: bold;
             <table>
               <tr>
                 <td>
-                  <a href="#" onclick="downloadExample()" style="font-size: 14pt; font-weight: bold; padding-left: 50px">example valuation</a>
+                  <a href="#" onclick="openExampleValuation()" style="font-size: 14pt; font-weight: bold; padding-left: 50px">example valuation</a>
                 </td>
                 <td>
                     <a href="#" onclick="downloadExample()" style="padding-left: 50px">
@@ -415,13 +433,60 @@ font-weight: bold;
     </div>
   
 
-    
+    </div>
+    </div>
 
 
 
  <!-- ************ Servcing Ends Content Here ************************ -->
-            <div style="height: 40px"></div>
-            <div id="footer"> footer here</div>
+           <!-- ****************************** Footer Starts Here ********************************************-->
+           <div style="height: 40px"></div>
+           <div id="footer"> 
+               <div class="row" style="text-align: left">
+
+              <div class="col-sm-6" style="background-color: #747474; height: 500px; padding: 70px 20px 20px 60px">
+                   
+                 <table width="600">
+                   <tr>
+                     <td stlyle="width: 100px; text-align: left !important"><a href="https://docs.google.com/forms/d/e/1FAIpQLSeb1e4VTjwv3DXVqJpMcDVkPQXu408baRibEQuDwQcy7pBoUg/viewform"  class="footerLink" target="_blank" style="padding-left: 0px">Contact Us</a></td>
+                     <td stlyle="width: 350px; text-align: left !important"><a href="" target="_blank" class="footerLink"><img src="" />YouTube</a></td>
+                   </tr>
+
+                   <tr>
+                     <td></td>
+                     <td><a href="" target="_blank" class="footerLink"><img src="" />Instagram</a></td>
+                   </tr>
+
+                   <tr>
+                     <td><a href="http://www.richardperrett.com/boutique/index.php" class="footerLink" target="_blank">The Boutique</a></td>
+                     <td></td>
+                  </tr>
+
+                  <tr>
+                   <td><a href="Servicing.html" class="footerLink">Service and Repair</a></td>
+                   <td></td>
+                  </tr>
+                  
+                  <tr>
+                   <td><a href="Valuations.html" class="footerLink">Valuations</a></td>
+                   <td></td>
+                  </tr>
+                 </table>
+                     
+             </div>
+               <div class="col-sm-6" style="text-align: right; background-image: url('assets/img/home/FooterGraphic.png'); background-repeat: no-repeat">
+                 <div style="height: 500px"></div>
+                   
+                 </div>
+                
+
+              
+               </div> 
+             </div> 
+
+           </div>
+
+            <!--
 
             <div class="sidebars">
                 <div class="sidebar right" style="z-index: 3" >
@@ -458,7 +523,7 @@ font-weight: bold;
             </div>
 
         
-
+-->
 
 
 <!-- Bootstrap core JavaScript
@@ -604,7 +669,23 @@ BootstrapDialog.show({
         });
 }      
 
+function openExampleValuation(){
 
+var $textAndPic3 = $('<div></div>');
+    $textAndPic3.append('<div align="center"><img class="img" src="assets/img/home/exampleValuation.png" alt="Generic placeholder image"/></div>');
+      
+
+BootstrapDialog.show({
+
+          onshown: function(dialogRef){
+              closeTools();
+          },
+          title: 'Example Valuation Report',
+          type: BootstrapDialog.TYPE_DEFAULT,
+          size: BootstrapDialog.SIZE_WIDE,
+          message: $textAndPic3
+      });
+} 
 
 /*
 function stopVid() {
